@@ -31,7 +31,7 @@ module RubyXL
         raise 'invalid shift option'
       end
 
-      data = data.gsub(/[\b\v]/,"") if data.is_a?(String) 
+      data = data.gsub(/[\b\v\u0002\u0003]/,"") if data.is_a?(String) 
 
       return add_cell(row, col, data, formula)
     end
